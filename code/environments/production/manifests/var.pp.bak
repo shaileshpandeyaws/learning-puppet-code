@@ -1,0 +1,46 @@
+$a=10
+
+notice $a
+
+[$b,$c]=[1,2]
+
+notice $b
+notice $c
+
+$d=[1,2,3,4,5]
+notice $d
+
+
+[$e,$f] = {e=>100,f=>200}
+notice $e
+notice $f
+
+
+$p = [1,2,'c','hello']
+
+notice $p
+
+$p.each |$var|{
+    notice $var
+}
+
+
+$h = { a=>100, b=>200, c=>300,d=>400}
+notice $h[key]
+
+$h.each |$var1, $var2|{
+#	notify {"$var1 $var2": }
+ 	notice "${var1} ${var2}"
+}
+
+
+$h.each |$varNew|{
+ 	notice "${varNew[0]} ${varNew[1]}"
+}
+
+$top_scope = " I am top"
+
+class a{
+
+notice "Class ${::top_scope}"
+}

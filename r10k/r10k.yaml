@@ -1,0 +1,14 @@
+---
+cachedir: /opt/puppetlabs/server/data/puppetserver/r10k
+sources:
+  puppet:
+    basedir: /etc/puppetlabs/code/environments
+    remote: https://github.com/shaileshpandeyaws/puppet-control.git
+
+
+git:
+    private_key: /etc/puppetlabs/puppetserver/ssh/id_rsa
+    provider: rugged
+deploy:
+    write_lock: Direct invocation of r10k is disabled when Code Manager is auto configured.
+

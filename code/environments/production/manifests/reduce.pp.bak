@@ -1,0 +1,13 @@
+$h ={a=>1, b=>2, c=>3,d=>4,e=>-10}
+
+$res =  $h.reduce | $mem, $val|{
+
+    $str = "${mem[0]}${val[0]}"
+    notice $str
+    $num = $mem[1] + $val[1]
+    notice $num
+
+    [$str, $num]
+}
+
+notice $res

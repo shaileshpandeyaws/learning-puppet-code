@@ -1,0 +1,4 @@
+
+notice hiera('foo')
+notice hiera('name')
+

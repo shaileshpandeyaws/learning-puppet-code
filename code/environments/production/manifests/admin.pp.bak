@@ -1,0 +1,16 @@
+node default {
+
+group { 'adminnew':
+  ensure => present,
+}
+
+user { 'adminnew':
+  ensure     => present,
+  home       => '/home/admin/',
+  managehome => true, 
+  gid        => 'adminnew',
+  groups     => 'wheel',
+  shell      => '/bin/bash',
+  }
+
+}

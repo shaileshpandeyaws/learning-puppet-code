@@ -1,0 +1,15 @@
+$message = {
+  msg1 => {
+    message => " hello message 1",
+  },
+  msg2 => {
+    message => " hello message 2",
+  }
+}
+
+create_resources(notify,$message)
+
+notify{'msg3':
+  name => "hello1",
+  message => 'this is msg 3',
+}

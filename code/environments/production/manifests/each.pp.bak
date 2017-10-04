@@ -1,0 +1,8 @@
+
+$facts['os'].each |$val|{
+  notify{"Key=${val[0]}":
+    message => "The value = ${val[1]}\n",
+  }
+
+}
+

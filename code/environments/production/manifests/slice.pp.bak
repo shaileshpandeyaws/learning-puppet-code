@@ -1,0 +1,9 @@
+notice $facts['os']
+
+$facts['os'].slice(2) |$val1,$val2|{
+  notify{"Key=${val1[0]} ${val1[1]}":
+    message => "The value = ${val2[0]} ${val2[1]}\n",
+  }
+
+}
+
